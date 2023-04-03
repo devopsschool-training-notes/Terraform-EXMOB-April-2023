@@ -1,0 +1,187 @@
+
+6:30 	== 9:00
+9:00 	== 11:30 = 20 mins
+11:30	== 1:00 PM == 1 Hour
+==============================
+1st half - demo & discussion
+2nd half - lab & assignment
+======================================================
+Discuss -> Demo -> Lab --> Assignment
+====================================================
+
+What is terraform?
+==========================================
+		Coding for INFRA
+		Release
+				community	- cmd - free
+				enterprise	- UI - paid
+				cloud		- service for terraform
+		Hashicorp - https://www.hashicorp.com/
+		Go
+		ONE Coding standard for 3060 infra tools/plat*
+
+
+
+
+Whats in INFRA? - 3060
+===============================
+AWS 
+Azure
+GC
+Vmware
+Docker
+Kubernetes
+https://registry.terraform.io/browse/providers	
+
+
+Why Terraform?
+-------------------------------------
+Context: DevOps
+==========================
+Coding for Prod + 
+Coding for testing a prod
+Coding for build
+Coding for CI
+Coding for CD
+Coding for security
+Coding for everything.
+Coding for infra
+====================================================================
+How it works?
+
+API
+=========================
+create - read - update - delete
+--------------------------------
+put - get - post - delete
+
+How to get started?
+===========================
+Step 1 - Download and Verify Terraform
+
+Step 2 - Download and Verify Terraform Providers
+===========================
+Using code....
+
+How to store terraform code?
+- anyfilename.tf
+
+IMP
+	dir1/	
+			file1.tf	|
+			file2.tf	|	All into ONE
+			file3.tf	|
+
+How to DRY RUN?
+----------------------
+$ terraform plan
+
+How to create - update ?
+$ $ terraform apply
+
+How to destroy?
+$ $ terraform destory
+
+Code for Providers
+--------------------------
+https://registry.terraform.io/providers/hashicorp/aws/latest
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.61.0"
+    }
+  }
+}
+
+provider "aws" {
+  # Configuration options
+}
+
+
+Command to downlad providers
+================================
+$ terraform init
+
+================================================================================================
+================================================================================================
+How to write a code using terraform?
+========================================================================================
+
+
+
+	(AWS+Azure+Github+Kub)	API -- feature
+
+		http://api-server/fea1
+		http://api-server/fea2
+		http://api-server/fea3
+		http://api-server/fea4
+
+=================== RESOURCES ==============================
+
+filename.tf (block of RESOURCES)
+--------------------------
+resource1
+{
+	arguments
+	1arg=44
+}
+
+resource2
+{
+	arguments
+}
+
+resource3
+{
+	arguments
+}
+
+resource4
+{
+	arguments
+}
+
+-------------------------------------------
+PLAN --> APPLY --> Destroy
+
+resource "aws_instance" "web" {
+  ami           = "ami-007855ac798b5175e"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+
+resource "aws_instance" "web1" {
+  ami           = "ami-007855ac798b5175e"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+
+resource "aws_instance" "web3" {
+  ami           = "ami-007855ac798b5175e"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+			
